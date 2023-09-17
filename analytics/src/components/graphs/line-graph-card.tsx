@@ -16,7 +16,7 @@ export function LineGrpahCard() {
         AxisOptions<typeof data[number]["data"][number]>
     >(
         () => ({
-            getValue: (datum) => datum.primary as unknown as Date,
+            getValue: (datum) => datum.primary as Date,
         }),
         []
     );
@@ -27,19 +27,24 @@ export function LineGrpahCard() {
         () => [
             {
                 getValue: (datum) => datum.secondary,
+                stacked: true,
+                // OR
+                // elementType: "area",
             },
         ],
         []
     );
 
+    console.log(data);
+
     return (
         <div className="bg-gray-900 px-4 py-5 sm:px-6">
-            <h3 className="text-base font-semibold leading-6 text-white">Job Postings</h3>
+            <h3 className="text-base font-semibold leading-6 text-white">Impressions</h3>
             <p className="mt-1 text-sm text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit quam corrupti consectetur.
             </p>
 
-            <div>
+            <div className="h-[22.5em]">
                 <Chart
                     options={{
                         data,

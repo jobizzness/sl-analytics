@@ -18,6 +18,12 @@ const LineGrpahCard = dynamic(
     ssr: false,
 });
 
+const DonutChartCard = dynamic(
+    () => import("../../src/components/graphs/donut-chart-card")
+        .then((mod) => mod.DonutChartCard), {
+    ssr: false,
+});
+
 export default async function Index() {
     /*
      * Replace the elements below with your own.
@@ -40,7 +46,7 @@ export default async function Index() {
                         <LineGrpahCard></LineGrpahCard>
                     </div>
                     <div className="2xl:col-span-4 lg:col-span-4 col-span-12">
-                        <LineGrpahCard></LineGrpahCard>
+                        <DonutChartCard></DonutChartCard>
                     </div>
                 </section>
             </div>
