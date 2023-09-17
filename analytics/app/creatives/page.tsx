@@ -125,7 +125,7 @@ function classNames(...classes) {
 }
 
 
-async function getData({ limit = 20, timeline = 'LAST_7_DAYS' } = {}) {
+function getData({ limit = 20, timeline = 'LAST_7_DAYS' } = {}) {
     const data = creativesData.data;
 
     let filteredData = data.filter(item => {
@@ -162,7 +162,7 @@ async function getData({ limit = 20, timeline = 'LAST_7_DAYS' } = {}) {
 
 export default async function Index() {
     // Defaults to limit: 20, timeline: 'LAST_7_DAYS'
-    const data = await getData();
+    const data = getData();
 
 
     const formatTime = (d) => {

@@ -16,9 +16,12 @@ import {
     XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
 
 const navigation = [
-    { name: 'Dashboard', href: '/dashboard', icon: HomeIcon, current: true },
+    { name: 'Dashboard', href: '/dashboard', icon: HomeIcon, current: false },
     { name: 'Creatives', href: '/creatives', icon: FolderIcon, current: false },
     { name: 'Ads', href: '#', icon: CalendarIcon, current: false },
     { name: 'Transactions', href: '#', icon: UsersIcon, current: false },
@@ -41,6 +44,8 @@ function classNames(...classes) {
 
 export default function Layout(props) {
     const [sidebarOpen, setSidebarOpen] = useState(false)
+    const pathname = usePathname()
+
 
     return (
         <>
@@ -109,10 +114,10 @@ export default function Layout(props) {
                                                     <ul role="list" className="-mx-2 space-y-1">
                                                         {navigation.map((item) => (
                                                             <li key={item.name}>
-                                                                <a
+                                                                <Link
                                                                     href={item.href}
                                                                     className={classNames(
-                                                                        item.current
+                                                                        pathname === item.href
                                                                             ? 'bg-gray-800 text-white'
                                                                             : 'text-gray-400 hover:text-white hover:bg-gray-800',
                                                                         'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
@@ -120,7 +125,7 @@ export default function Layout(props) {
                                                                 >
                                                                     <item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
                                                                     {item.name}
-                                                                </a>
+                                                                </Link>
                                                             </li>
                                                         ))}
                                                     </ul>
@@ -183,10 +188,10 @@ export default function Layout(props) {
                                     <ul role="list" className="-mx-2 space-y-1">
                                         {navigation.map((item) => (
                                             <li key={item.name}>
-                                                <a
+                                                <Link
                                                     href={item.href}
                                                     className={classNames(
-                                                        item.current
+                                                        pathname === item.href
                                                             ? 'bg-gray-800 text-white'
                                                             : 'text-gray-400 hover:text-white hover:bg-gray-800',
                                                         'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
@@ -194,7 +199,7 @@ export default function Layout(props) {
                                                 >
                                                     <item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
                                                     {item.name}
-                                                </a>
+                                                </Link>
                                             </li>
                                         ))}
                                     </ul>
