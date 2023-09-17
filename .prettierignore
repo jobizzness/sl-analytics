@@ -1,0 +1,6 @@
+# Add files here to ignore them from prettier formatting
+/dist
+/coverage
+/apps/news/node_modules
+/apps/news/public
+/apps/news/.cache

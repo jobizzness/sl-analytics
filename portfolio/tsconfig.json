@@ -1,0 +1,36 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "types": ["jest", "node"]
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
+    "../portfolio/.next/types/**/*.ts",
+    "../dist/portfolio/.next/types/**/*.ts",
+    "next-env.d.ts"
+, "app/page/page/[[builder-page.tsx]]"  ],
+  "exclude": [
+    "node_modules",
+    "jest.config.ts",
+    "src/**/*.spec.ts",
+    "src/**/*.test.ts"
+  ]
+}

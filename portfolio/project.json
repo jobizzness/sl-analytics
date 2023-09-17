@@ -1,0 +1,71 @@
+{
+  "name": "portfolio",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "portfolio",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "baseHref": "/portfolio/exported",
+        "assets": ["./portfolio/assets"],
+        "postcssConfig": "./postcss.config.js",
+        "outputPath": "dist/portfolio"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "portfolio"
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "portfolio:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "portfolio:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "portfolio:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nx/next:export",
+      "options": {
+        "buildTarget": "portfolio:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "portfolio/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["portfolio/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": []
+}

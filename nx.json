@@ -1,0 +1,58 @@
+{
+  "targetDefaults": {
+    "test": {
+      "inputs": ["default", "^default", "{workspaceRoot}/jest.preset.js"]
+    },
+    "lint": {
+      "inputs": [
+        "default",
+        "{workspaceRoot}/.eslintrc.json",
+        "{workspaceRoot}/.eslintignore"
+      ]
+    }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx-cloud",
+      "options": {
+        "cacheableOperations": ["build:blog", "build"],
+        "accessToken": "N2ZhOTY4YzEtZGNiNy00MWNjLWJlNWItNGU0NjQ0MmM5MTA2fHJlYWQtd3JpdGU="
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/gatsby"
+  },
+  "generators": {
+    "@nrwl/gatsby": {
+      "application": {
+        "style": "scss"
+      }
+    },
+    "@nx/react": {
+      "application": {
+        "style": "scss",
+        "linter": "eslint",
+        "bundler": "vite",
+        "babel": true
+      },
+      "component": {
+        "style": "scss"
+      },
+      "library": {
+        "style": "scss",
+        "linter": "eslint"
+      }
+    },
+    "@nx/next": {
+      "application": {
+        "style": "styled-components",
+        "linter": "eslint"
+      }
+    }
+  },
+  "defaultProject": "news",
+  "workspaceLayout": {
+    "projectNameAndRootFormat": "as-provided"
+  }
+}
