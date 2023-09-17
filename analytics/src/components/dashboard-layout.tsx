@@ -48,7 +48,7 @@ export default function Layout(props) {
         This example requires updating your template:
 
         ```
-        <html class="h-full bg-white">
+        <html class="h-full bg-gray-900">
         <body class="h-full">
         ```
       */}
@@ -237,7 +237,7 @@ export default function Layout(props) {
                 </div>
 
                 <div className="lg:pl-72">
-                    <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-gray-200 bg-white px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">
+                    <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 bg-gray-900 px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">
                         <button type="button" className="-m-2.5 p-2.5 text-gray-700 lg:hidden" onClick={() => setSidebarOpen(true)}>
                             <span className="sr-only">Open sidebar</span>
                             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
@@ -257,7 +257,7 @@ export default function Layout(props) {
                                 />
                                 <input
                                     id="search-field"
-                                    className="block h-full w-full border-0 py-0 pl-8 pr-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm"
+                                    className="block h-full w-full bg-transparent border-0 py-0 pl-8 pr-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm"
                                     placeholder="Search..."
                                     type="search"
                                     name="search"
@@ -297,7 +297,7 @@ export default function Layout(props) {
                                         leaveFrom="transform opacity-100 scale-100"
                                         leaveTo="transform opacity-0 scale-95"
                                     >
-                                        <Menu.Items className="absolute right-0 z-10 mt-2.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none">
+                                        <Menu.Items className="absolute right-0 z-10 mt-2.5 w-32 origin-top-right rounded-md bg-gray-900 py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none">
                                             {userNavigation.map((item) => (
                                                 <Menu.Item key={item.name}>
                                                     {({ active }) => (
