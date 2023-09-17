@@ -1,3 +1,4 @@
+"use client";
 
 import { useChartConfig } from '../../../app/useDemoConfig';
 import { useState, useMemo } from 'react';

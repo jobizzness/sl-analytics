@@ -39,7 +39,7 @@ export default async function Index() {
                     <div className="2xl:col-span-8 lg:col-span-7 col-span-12">
                         <LineGrpahCard></LineGrpahCard>
                     </div>
-                    <div className="2xl:col-span-8 lg:col-span-7 col-span-12">
+                    <div className="2xl:col-span-4 lg:col-span-4 col-span-12">
                         <LineGrpahCard></LineGrpahCard>
                     </div>
                 </section>
