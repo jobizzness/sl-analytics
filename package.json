@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "ci": "npm run build:blog",
     "build:blog": "nx exec -- cd blog/site; yarn run build",
-    "build": "nx build portfolio",
-    "start": "nx serve portfolio",
-    "export": "nx export portfolio"
+    "build": "nx build analytics",
+    "start": "nx serve analytics",
+    "export": "nx export analytics"
   },
    "dependencies": {
     "@builder.io/personalization-utils": "^2.0.0",
