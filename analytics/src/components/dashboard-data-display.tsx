@@ -1,4 +1,5 @@
-import { ArrowDownIcon, ArrowUpIcon } from '@heroicons/react/20/solid'
+import { ArrowDownIcon, ArrowUpIcon } from '@heroicons/react/20/solid';
+import dynamic from 'next/dynamic';
 
 const stats = [
     { name: 'Total Subscribers', stat: '71,897', previousStat: '70,946', change: '12%', changeType: 'increase' },
