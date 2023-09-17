@@ -18,17 +18,17 @@ import {
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 
 const navigation = [
-    { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-    { name: 'Team', href: '#', icon: UsersIcon, current: false },
-    { name: 'Projects', href: '#', icon: FolderIcon, current: false },
-    { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
-    { name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false },
-    { name: 'Reports', href: '#', icon: ChartPieIcon, current: false },
+    { name: 'Dashboard', href: '/dashboard', icon: HomeIcon, current: true },
+    { name: 'Creatives', href: '/creatives', icon: FolderIcon, current: false },
+    { name: 'Ads', href: '#', icon: CalendarIcon, current: false },
+    { name: 'Transactions', href: '#', icon: UsersIcon, current: false },
+    { name: 'Connectors', href: '#', icon: DocumentDuplicateIcon, current: false },
+
 ]
 const teams = [
-    { id: 1, name: 'Heroicons', href: '#', initial: 'H', current: false },
+    { id: 1, name: 'Team', href: '#', initial: 'H', current: false },
     { id: 2, name: 'Tailwind Labs', href: '#', initial: 'T', current: false },
-    { id: 3, name: 'Workcation', href: '#', initial: 'W', current: false },
+    { id: 3, name: 'Settings', href: '#', initial: 'W', current: false },
 ]
 const userNavigation = [
     { name: 'Your profile', href: '#' },
@@ -99,7 +99,7 @@ export default function Layout(props) {
                                         <div className="flex h-16 shrink-0 items-center">
                                             <img
                                                 className="h-8 w-auto"
-                                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                                                src="https://jobizzness.com/assets/images/logo.png"
                                                 alt="Your Company"
                                             />
                                         </div>
@@ -173,7 +173,7 @@ export default function Layout(props) {
                         <div className="flex h-16 shrink-0 items-center">
                             <img
                                 className="h-8 w-auto"
-                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                                src="https://jobizzness.com/assets/images/logo.png"
                                 alt="Your Company"
                             />
                         </div>
