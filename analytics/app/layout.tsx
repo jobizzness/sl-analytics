@@ -1,5 +1,9 @@
 import './global.css';
+import '../assets/app.scss';
 import { StyledComponentsRegistry } from './registry';
+
+import Footer from '../src/components/footer';
+import Header from '../src/components/header';
 
 export const metadata = {
   title: 'Welcome to demo2',
@@ -14,7 +18,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <Header></Header>
+
+        <div style={{ minHeight: '60vh' }}>
+          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        </div>
+
+        <Footer></Footer>
       </body>
     </html>
   );
