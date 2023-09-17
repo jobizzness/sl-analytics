@@ -11,11 +11,12 @@
     "start": "nx serve analytics",
     "export": "nx export analytics"
   },
-   "dependencies": {
+  "dependencies": {
     "@builder.io/personalization-utils": "^2.0.0",
     "@builder.io/react": "^3.0.13",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
+    "@tailwindcss/forms": "^0.5.6",
     "next": "13.4.1",
     "next-seo": "^6.1.0",
     "prop-types": "15.8.1",
@@ -105,7 +106,5 @@
         ]
       }
     }
-  
   }
- 
 }
