@@ -162,13 +162,16 @@ function getData({ limit = 20, timeline = 'LAST_7_DAYS' } = {}) {
 
 export default async function Index() {
     // Defaults to limit: 20, timeline: 'LAST_7_DAYS'
-    const data = getData();
+    // const data = getData();
+
+    const data = []
 
 
     const formatTime = (d) => {
-        let rtf = new Intl.RelativeTimeFormat('en', { numeric: 'auto' });
+        const rtf = new Intl.RelativeTimeFormat('en', { numeric: 'auto' });
 
-        let diffInDays = Math.floor((new Date() - new Date(d)) / (1000 * 60 * 60 * 24));
+        // @ts-ignore
+        const diffInDays = Math.floor((new Date() - new Date(d)) / (1000 * 60 * 60 * 24));
 
         return rtf.format(-diffInDays, 'day') // Format the time difference;
 
@@ -213,7 +216,7 @@ export default async function Index() {
                         </tr>
                     </thead>
                     <tbody className="divide-y divide-white/5">
-                        {data.map((item) => (
+                        {data.map((item: any) => (
                             <tr key={item.id}>
                                 <td className="py-4 pl-4 pr-8 sm:pl-6 lg:pl-8">
                                     <div className="flex items-center gap-x-4">

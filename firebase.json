@@ -1,16 +1,17 @@
 {
   "hosting": {
-    "public": "public",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "public": "dist/analytics/exported",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
     "rewrites": [
       {
-        "source": "blog/**",
-        "destination": "/blog/index.html"
-      },
-      {
         "source": "**",
-        "destination": "/index.html"
+        "destination": "/dashboard.html"
       }
+      
     ]
   }
 }

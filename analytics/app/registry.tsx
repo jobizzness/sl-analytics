@@ -27,6 +27,7 @@ export function StyledComponentsRegistry({
 
   return (
     <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
+      {/* @ts-ignore */}
       {children}
     </StyleSheetManager>
   );

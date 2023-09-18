@@ -1,5 +1,5 @@
 import './global.css';
-import '../assets/app.css';
+import '../assets/app.scss';
 import { StyledComponentsRegistry } from './registry';
 
 import Footer from '../src/components/footer';
