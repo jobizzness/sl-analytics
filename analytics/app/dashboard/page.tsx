@@ -61,39 +61,40 @@ export default async function Index() {
 
     return (
         <StyledPage>
-            <PageHeader pageTitle="Dashboard"></PageHeader>
+            <PageHeader pageTitle="Dashboards"></PageHeader>
 
             <div className="wrapper">
                 <DashboardDataDisplay></DashboardDataDisplay>
-
+                  
                 {/* Impressions */}
                 <section className="grid grid-cols-12 gap-5 mt-6">
-                    <div className="2xl:col-span-8 lg:col-span-7 col-span-12">
+                    {/* <div className="2xl:col-span-8 lg:col-span-7 col-span-12">
                         <StackedLineGrpahCard></StackedLineGrpahCard>
                     </div>
+                    
                     <div className="2xl:col-span-4 lg:col-span-4 col-span-12">
                         <DonutChartCard></DonutChartCard>
-                    </div>
+                    </div> */}
                 </section>
 
                 {/* Tables */}
                 <section className="grid grid-cols-12 gap-5 mt-6">
-                    <div className="2xl:col-span-6 lg:col-span-6 col-span-12">
+                    {/* <div className="2xl:col-span-6 lg:col-span-6 col-span-12">
                         <TopPerformingCreatives data={creativesData}></TopPerformingCreatives>
                     </div>
                     <div className="2xl:col-span-6 lg:col-span-6 col-span-12">
                         <LatestTransactions data={creativesData}></LatestTransactions>
-                    </div>
+                    </div> */}
                 </section>
 
                 {/* More Stats */}
                 <section className="grid grid-cols-12 gap-5 mt-6">
-                    <div className="2xl:col-span-6 lg:col-span-7 col-span-12">
+                    {/* <div className="2xl:col-span-6 lg:col-span-7 col-span-12">
                         <LineGrpahCard></LineGrpahCard>
                     </div>
                     <div className="2xl:col-span-6 lg:col-span-4 col-span-12">
                         <FunnelGraphCard></FunnelGraphCard>
-                    </div>
+                    </div> */}
                 </section>
             </div>
 
