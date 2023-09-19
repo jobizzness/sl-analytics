@@ -3,18 +3,7 @@
 
 import { Fragment, useState } from 'react'
 import { Dialog, Menu, Transition } from '@headlessui/react'
-import {
-    Bars3Icon,
-    BellIcon,
-    CalendarIcon,
-    ChartPieIcon,
-    Cog6ToothIcon,
-    DocumentDuplicateIcon,
-    FolderIcon,
-    HomeIcon,
-    UsersIcon,
-    XMarkIcon,
-} from '@heroicons/react/24/outline'
+import { DotFilledIcon, CheckIcon, ChevronRightIcon ,HomeIcon,CalendarIcon, FileIcon, PersonIcon, FileTextIcon,BellIcon, GearIcon } from '@radix-ui/react-icons';
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -22,10 +11,10 @@ import { usePathname } from 'next/navigation';
 
 const navigation = [
     { name: 'Dashboard', href: '/dashboard', icon: HomeIcon, current: false },
-    { name: 'Creatives', href: '/creatives', icon: FolderIcon, current: false },
+    { name: 'Creatives', href: '/creatives', icon: FileIcon, current: false },
     { name: 'Ads', href: '#', icon: CalendarIcon, current: false },
-    { name: 'Transactions', href: '#', icon: UsersIcon, current: false },
-    { name: 'Connectors', href: '#', icon: DocumentDuplicateIcon, current: false },
+    { name: 'Transactions', href: '#', icon: PersonIcon, current: false },
+    { name: 'Connectors', href: '#', icon: FileTextIcon, current: false },
 
 ]
 const teams = [
@@ -95,7 +84,7 @@ export default function Layout(props) {
                                         <div className="absolute left-full top-0 flex w-16 justify-center pt-5">
                                             <button type="button" className="-m-2.5 p-2.5" onClick={() => setSidebarOpen(false)}>
                                                 <span className="sr-only">Close sidebar</span>
-                                                <XMarkIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                                                <BellIcon className="h-6 w-6 text-white" aria-hidden="true" />
                                             </button>
                                         </div>
                                     </Transition.Child>
@@ -158,7 +147,7 @@ export default function Layout(props) {
                                                         href="#"
                                                         className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-gray-800 hover:text-white"
                                                     >
-                                                        <Cog6ToothIcon className="h-6 w-6 shrink-0" aria-hidden="true" />
+                                                        <BellIcon className="h-6 w-6 shrink-0" aria-hidden="true" />
                                                         Settings
                                                     </a>
                                                 </li>
@@ -197,7 +186,7 @@ export default function Layout(props) {
                                                         'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
                                                     )}
                                                 >
-                                                    <item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
+                                                    <item.icon className="h-4 w-4 shrink-0 my-auto" aria-hidden="true" />
                                                     {item.name}
                                                 </Link>
                                             </li>
@@ -232,7 +221,7 @@ export default function Layout(props) {
                                         href="#"
                                         className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-gray-800 hover:text-white"
                                     >
-                                        <Cog6ToothIcon className="h-6 w-6 shrink-0" aria-hidden="true" />
+                                        <GearIcon  className="h-4 w-4 my-auto  shrink-0" aria-hidden="true" />
                                         Settings
                                     </a>
                                 </li>
@@ -245,7 +234,7 @@ export default function Layout(props) {
                     <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 bg-gray-900 px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">
                         <button type="button" className="-m-2.5 p-2.5 text-gray-700 lg:hidden" onClick={() => setSidebarOpen(true)}>
                             <span className="sr-only">Open sidebar</span>
-                            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                            <BellIcon className="h-6 w-6" aria-hidden="true" />
                         </button>
 
                         {/* Separator */}
